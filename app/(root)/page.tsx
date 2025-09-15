@@ -1,5 +1,5 @@
 // "use client";
-
+import { Suspense } from "react";
 import {
   Container,
   Filters,
@@ -35,7 +35,9 @@ export default async function Home() {
         <div className="flex gap-[80px]">
           {/* Filter */}
           <div className="w-[250px]">
-            <Filters />
+            <Suspense fallback={<div>Loading filters...</div>}>
+              <Filters />
+            </Suspense>
           </div>
           {/* Produktliste */}
           <div className="flex-1">

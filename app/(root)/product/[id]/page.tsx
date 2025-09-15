@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import {
   Container,
   GroupVariants,
-  ProductImage,
+  PizzaImage,
   Title,
 } from "@/shared/components/shared";
 
@@ -30,7 +30,7 @@ export default async function ProductPage({
   return (
     <Container className="flex flex-col my-10">
       <div className="flex flex-1">
-        <ProductImage imageUrl={product.imageUrl} size={20} />
+        <PizzaImage imageUrl={product.imageUrl} size={40} />
         <div className="w-[490px] p-7 bg-[#f7f6f5]">
           <Title
             text={product.name}
@@ -41,7 +41,7 @@ export default async function ProductPage({
             Lorem ipsum dolor sit amet consectetur adipisicing.
           </p>
           <GroupVariants
-            selectedValue="2"
+            value="2"
             items={[
               {
                 name: "Маленькая",
